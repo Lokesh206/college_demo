@@ -1,9 +1,15 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, current_app, request, jsonify
 from app.models import User, StudentProfile, FacultyProfile, ParentProfile, AuditLog
 from app.extensions import db
 from app.utils.auth_helpers import generate_token, token_required
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/api/auth')
+DEMO_USERNAMES = {
+    'admin': 'admin',
+    'faculty': 'faculty.physics',
+    'student': 'student.rohit',
+    'parent': 'parent.rohit'
+}
 
 @auth_bp.route('/login', methods=['POST'])
 def login():
@@ -15,6 +21,9 @@ def login():
         return jsonify({'error': 'Username and password are required.'}), 400
 
     user = User.query.filter((User.username == username) | (User.email == username)).first()
+    if user and user.username in DEMO_USERNAMES.values() and not current_app.config['ENABLE_DEMO_ACCOUNTS']:
+        return jsonify({'error': 'Demo accounts are disabled.'}), 403
+
     if not user or not user.check_password(password):
         return jsonify({'error': 'Invalid credentials. Please verify your username and password.'}), 401
 
@@ -54,17 +63,13 @@ def login():
 
 @auth_bp.route('/demo-login', methods=['POST'])
 def demo_login():
+    if not current_app.config['ENABLE_DEMO_ACCOUNTS']:
+        return jsonify({'error': 'Demo accounts are disabled.'}), 403
+
     data = request.get_json() or {}
     role = data.get('role', 'student').lower()
 
-    demo_usernames = {
-        'admin': 'admin',
-        'faculty': 'faculty.physics',
-        'student': 'student.rohit',
-        'parent': 'parent.rohit'
-    }
-
-    target_username = demo_usernames.get(role, 'student.rohit')
+    target_username = DEMO_USERNAMES.get(role, 'student.rohit')
     user = User.query.filter_by(username=target_username).first()
 
     if not user:
@@ -102,4 +107,3 @@ def get_current_user(current_user):
         'user': current_user.to_dict(),
         'profile': profile_data
     })
-

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: college-demo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && npm ci --prefix frontend && npm run build --prefix frontend
+    startCommand: gunicorn run:app
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: ENABLE_DEMO_ACCOUNTS
+        value: "false"

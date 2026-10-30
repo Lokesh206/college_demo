@@ -33,6 +33,13 @@
 
 ## 🚀 Quick Start Guide
 
+### Deploy to Render
+1. Push this repository to GitHub and open [Render Blueprints](https://dashboard.render.com/blueprints).
+2. Select **New Blueprint Instance**, connect this repository, and apply the `render.yaml` configuration.
+3. Wait for the build to finish, then open the Render URL shown for the `college-demo` service.
+
+The blueprint builds the React frontend and serves it with the Flask API through Gunicorn. It generates signing keys and disables the documented demo accounts by default because their credentials are public. The free service uses an ephemeral filesystem: database changes can be lost when the service restarts or redeploys, so connect a managed database before using it for persistent data. Add `GEMINI_API_KEY` in the Render dashboard if you want to enable the Gemini chatbot.
+
 ### 1. Prerequisites
 - Python 3.10+
 - Node.js 18+ and npm
