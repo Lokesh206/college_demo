@@ -538,6 +538,266 @@ export default function HomePage() {
         )}
       </section>
 
+      {/* 4. ACADEMIC STREAMS OVERVIEW (DISPLAYED IMMEDIATELY AFTER GALLERY AS REQUESTED) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-50 text-navy-900 border border-navy-200 text-xs font-bold uppercase tracking-wider">
+            <GraduationCap className="w-3.5 h-3.5 text-gold-600" />
+            <span>Karnataka Pre-University Curriculum</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-navy-950 font-serif">
+            Academic Streams & Combinations
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Curated combinations meticulously designed to empower students for national entrance examinations and global undergraduate pathways.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Science Stream */}
+          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+            <div className="p-7 space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center border border-blue-200 group-hover:scale-110 transition-transform">
+                <Atom className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-950 font-serif">Science Stream</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Comprehensive training in fundamental and experimental sciences with integrated KCET, NEET, and JEE coaching.
+              </p>
+
+              <div className="space-y-2 pt-2">
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">PCMB:</strong>
+                  <span className="text-slate-600">Physics, Chemistry, Mathematics, Biology</span>
+                </div>
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">PCMC:</strong>
+                  <span className="text-slate-600">Physics, Chemistry, Mathematics, Computer Science</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
+              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
+                <span>View Syllabus & Lab Details</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Commerce Stream */}
+          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+            <div className="p-7 space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-950 font-serif">Commerce Stream</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Financial modeling, accounting principles, and business economics integrated with CA Foundation coaching.
+              </p>
+
+              <div className="space-y-2 pt-2">
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">CEBA:</strong>
+                  <span className="text-slate-600">Computer Science, Economics, Business Studies, Accountancy</span>
+                </div>
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">SEBA:</strong>
+                  <span className="text-slate-600">Statistics, Economics, Business Studies, Accountancy</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
+              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
+                <span>Explore Commerce Combinations</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Arts & Humanities Stream */}
+          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+            <div className="p-7 space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center border border-purple-200 group-hover:scale-110 transition-transform">
+                <Landmark className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-950 font-serif">Arts & Humanities</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Critical humanistic inquiry, governance, diplomacy, and sociology for civil services and legal aspirants.
+              </p>
+
+              <div className="space-y-2 pt-2">
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">HEPS:</strong>
+                  <span className="text-slate-600">History, Economics, Political Science, Sociology</span>
+                </div>
+                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                  <strong className="text-navy-950 block">Civil Services Wing:</strong>
+                  <span className="text-slate-600">UPSC Foundation, Model United Nations & Moot Court</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
+              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
+                <span>View Humanities & Languages</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. WHY SRI VIDYA PRE-UNIVERSITY COLLEGE? ("WHY MY COLLEGE" - FEATURED REQUIREMENT) */}
+      <section className="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold-100 text-gold-900 border border-gold-300 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-gold-700" />
+              <span>Why Choose Sri Vidya PU College?</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-navy-950 font-serif">
+              Built for Academic Rigor. Driven by Proven Results.
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
+              Discover why over 1,250 families across Karnataka choose Sri Vidya for integrated PU Board education and premier competitive entrance success.
+            </p>
+          </div>
+
+          {/* 6 Key Advantage Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* 1. Integrated 2-in-1 Dual Focus */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">Integrated 2-in-1 Curriculum</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Karnataka PU Board NCERT theory seamlessly synchronised with daily <strong>KCET, NEET, and JEE</strong> practice in regular college hours. Zero external coaching needed, saving 4+ hours daily for self-study.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-blue-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Zero Tuition Fatigue • 1 Unified Timetable</span>
+              </div>
+            </div>
+
+            {/* 2. Top 5 State Ranks & 99.52% Pass Rate */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Trophy className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">Unrivalled Results Track Record</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Consistently ranked in Karnataka’s Top 5 PU Colleges with a <strong>99.52% overall pass rate</strong> and 82.4% students securing Distinctions. Over 140+ students placed into AIIMS, JIPMER, NITK, and IITs annually.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-amber-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>State Ranks #02, #04, #07 in 2024–2025</span>
+              </div>
+            </div>
+
+            {/* 3. 64+ Senior Specialist Faculty */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">64+ Ph.D. & M.Sc. Faculty</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Full-time permanent educators with an average of 15+ years experience mentoring Karnataka state toppers. Former PU Board question paper setters, textbook authors, and chief valuation examiners.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-purple-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>1:15 Mentor-to-Student Ratio</span>
+              </div>
+            </div>
+
+            {/* 4. On-Campus CBT Mock Exam Center */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Laptop className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">Simulated 120-Terminal CBT Center</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Karnataka’s first dedicated on-campus Computer-Based Testing center. Weekly simulated mock tests with official NTA/KEA software patterns, instant scorecards, negative marking analysis, and chapter analytics.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-emerald-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Instant Diagnostic Scorecards</span>
+              </div>
+            </div>
+
+            {/* 5. 45,000+ Volume Digital Central Library */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Library className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">Dr. Kalam Central Library</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Extensive repository of 45,000+ academic volumes, previous 25-year question paper banks, 50 digital research terminals, DelNet international e-journals, and peaceful study alcoves open until 8:00 PM.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-rose-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Quiet Study Alcoves Open Till 8 PM</span>
+              </div>
+            </div>
+
+            {/* 6. Daily Doubt Clinic & Real-time Parent Portal */}
+            <div className="bg-white p-6 rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200 space-y-4 group transition-all duration-300 hover:border-gold-400">
+              <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <HeartHandshake className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-navy-950 font-serif">Daily Doubt Clinic & Parent App</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Mandatory daily 1-on-1 doubt clarification clinics (5:00 PM – 6:00 PM). Parents track live attendance, test performance, and faculty remarks via our dedicated 24/7 digital parent portal.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-[11px] font-bold text-teal-700">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Daily 1-on-1 Faculty Doubt Resolution</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Institutional Highlights Banner */}
+          <div className="bg-navy-950 text-white rounded-3xl p-8 lg:p-10 shadow-2xl border border-gold-500/40 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div className="space-y-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-gold-400">Scholarship Support</span>
+              <h4 className="text-lg font-bold font-serif text-white">Up to 100% Merit Fee Waivers</h4>
+              <p className="text-xs text-slate-300">
+                Smt. Shakuntala Vidya Sagar Scholarship awards full and partial fee concessions for 10th standard scorers above 95% and sports medalists.
+              </p>
+            </div>
+
+            <div className="space-y-2 border-y md:border-y-0 md:border-x border-navy-800 py-4 md:py-0 md:px-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-gold-400">Hostel & Living</span>
+              <h4 className="text-lg font-bold font-serif text-white">Safe 8.5-Acre Residential Campus</h4>
+              <p className="text-xs text-slate-300">
+                Separate on-campus residential complexes for boys and girls with 24/7 CCTV, warden care, nutritious vegetarian dining, and Wi-Fi.
+              </p>
+            </div>
+
+            <div className="space-y-3 md:text-right">
+              <span className="text-xs font-bold uppercase tracking-wider text-gold-400">Admissions 2026–2027</span>
+              <h4 className="text-lg font-bold font-serif text-white">Experience Sri Vidya Firsthand</h4>
+              <Link
+                to="/admissions"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold text-xs uppercase tracking-wider transition shadow"
+              >
+                <span>Book Campus Tour</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 4. FOUNDERS SECTION (MORE THAN ONE FOUNDER - FEATURED REQUIREMENT) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -856,119 +1116,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 7. ACADEMIC STREAMS OVERVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-50 text-navy-900 border border-navy-200 text-xs font-bold uppercase tracking-wider">
-            <GraduationCap className="w-3.5 h-3.5 text-gold-600" />
-            <span>Karnataka Pre-University Curriculum</span>
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-navy-950 font-serif">
-            Academic Streams & Combinations
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Curated combinations meticulously designed to empower students for national entrance examinations and global undergraduate pathways.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Science Stream */}
-          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
-            <div className="p-7 space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center border border-blue-200 group-hover:scale-110 transition-transform">
-                <Atom className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-950 font-serif">Science Stream</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Comprehensive training in fundamental and experimental sciences with integrated KCET, NEET, and JEE coaching.
-              </p>
-
-              <div className="space-y-2 pt-2">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">PCMB:</strong>
-                  <span className="text-slate-600">Physics, Chemistry, Mathematics, Biology</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">PCMC:</strong>
-                  <span className="text-slate-600">Physics, Chemistry, Mathematics, Computer Science</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
-              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
-                <span>View Syllabus & Lab Details</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Commerce Stream */}
-          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
-            <div className="p-7 space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200 group-hover:scale-110 transition-transform">
-                <TrendingUp className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-950 font-serif">Commerce Stream</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Financial modeling, accounting principles, and business economics integrated with CA Foundation coaching.
-              </p>
-
-              <div className="space-y-2 pt-2">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">CEBA:</strong>
-                  <span className="text-slate-600">Computer Science, Economics, Business Studies, Accountancy</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">SEBA:</strong>
-                  <span className="text-slate-600">Statistics, Economics, Business Studies, Accountancy</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
-              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
-                <span>Explore Commerce Combinations</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Arts & Humanities Stream */}
-          <div className="bg-white rounded-2xl shadow-premium hover:shadow-premium-hover border border-slate-200/90 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
-            <div className="p-7 space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center border border-purple-200 group-hover:scale-110 transition-transform">
-                <Landmark className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-950 font-serif">Arts & Humanities</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Critical humanistic inquiry, governance, diplomacy, and sociology for civil services and legal aspirants.
-              </p>
-
-              <div className="space-y-2 pt-2">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">HEPS:</strong>
-                  <span className="text-slate-600">History, Economics, Political Science, Sociology</span>
-                </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                  <strong className="text-navy-950 block">Civil Services Wing:</strong>
-                  <span className="text-slate-600">UPSC Foundation, Model United Nations & Moot Court</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-slate-50/70 border-t border-slate-100">
-              <Link to="/academics" className="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center justify-between">
-                <span>View Humanities & Languages</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
         </div>
       </section>
 
